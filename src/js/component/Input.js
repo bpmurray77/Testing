@@ -16,16 +16,28 @@ const Input = ({addTask}) => {
     }
 
     return(
-        <div class="input-group">
-            <span class="input-group-text">Quantity</span>
-            <form onSubmit={handleSubmit}>
-            <input
-                type="number"
-                aria-label="Quantity"
-                class="form-control"
-                onChange={handleChange}
-            />
-            </form>
+        <div>
+        <div class="row">
+        <div class="row ifields">
+            <div class="input-group">
+                    <span class="input-group-text">Quantity</span>
+                    <input
+                      type="number"
+                      aria-label="Quantity"
+                      class="form-control"
+                      name="quantity"
+                      placeholder="Quantity"
+                      onChange={handleChange}
+                    />
+                  </div>
+            <div class="col-sm-2 form-group">
+                <input type="number" min="1" class="form-control text-center" name="pquantity" placeholder="Product Quantity" value="2" onChange={handleChange} />
+            </div>
+            <div class="col-sm-1">
+                <button class="btn btn-default add-btn">Add</button>
+            </div>
+        </div>
+        </div>
         </div>
     );
 };
